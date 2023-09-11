@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>After&Before</title>
+    <style>
+.box{
+  
+background-color: black;
+   
+position: absolute;
+margin: auto;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+width: 250px;
+height: 250px;
+}
+
+.box h3{
+    color: white;
+    text-align: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.box::after{
+content: '[_______________________]';
+   
+   
+   
+   
+   
+    color: red;
+
+    margin-left: 30px;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="box">
+<h3 >Cool border</h3>
+    
+    </div>
+</body>
+</html>
