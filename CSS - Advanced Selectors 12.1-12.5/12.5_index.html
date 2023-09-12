@@ -19,9 +19,51 @@
       color: white;
      }
 
-    .lorem p:nth-child(5n + 0){
+    .second:nth-child(1n + 0){
         color: red;
     }
+
+    .third:nth-child(1n+0){
+        color: blue;
+    }
+    .tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
 
 
 
@@ -30,9 +72,9 @@
 </head>
 <body>
     <div class="lorem">
-       <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus minima maxime soluta unde dicta quam cumque libero repudiandae totam ea quisquam ex iusto voluptatem, iure ratione, dolor aliquam explicabo laudantium? Illo eius modi repellendus similique velit ab soluta doloremque atque voluptas quae sit eligendi assumenda, accusantium rerum qui totam praesentium aliquam voluptatibus reiciendis adipisci pariatur libero odit in aliquid. Molestias, facilis pariatur consectetur ea neque tempore? Totam exercitationem ab accusantium, molestias quibusdam, eligendi assumenda laboriosam eveniet aspernatur officiis.
+       <p class="first"> Lorem ipsum dolor sit amet  <span> <p class="second">consectetur</p></span>   consectetur, adipisicing elit. Natus minima maxime soluta unde dicta quam cumque libero repudiandae totam ea quisquam ex iusto voluptatem, iure ratione, dolor aliquam explicabo laudantium? Illo eius modi repellendus similique velit ab soluta doloremque atque voluptas quae sit eligendi assumenda, accusantium rerum qui totam praesentium aliquam voluptatibus reiciendis adipisci pariatur libero odit in aliquid. Molestias, facilis pariatur consectetur ea neque tempore? Totam exercitationem ab accusantium, molestias quibusdam, eligendi assumenda laboriosam eveniet aspernatur officiis.
         <br><br><br>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime nostrum necessitatibus labore eaque commodi! Id consequatur temporibus corporis nobis, nostrum nam excepturi quisquam iste vitae sit, minus nemo. Consectetur hic voluptas alias qui error sunt laborum quam molestiae. Doloremque, corrupti enim explicabo omnis repudiandae tempore, eveniet earum voluptatem, deserunt sed quod ea quas numquam consequuntur. Vero nemo distinctio numquam aliquid. Ipsa exercitationem explicabo praesentium adipisci iure. Pariatur ut eius repellat perspiciatis reprehenderit. Repudiandae vero natus rerum facere. Officiis, quibusdam unde?</p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime nostrum necessitatibus labore eaque commodi! Id <p style="color: aqua;"    class="tooltip"><span style="color: black;" class="tooltiptext">Tooltip text</span>consequatur</p>temporibus corporis nobis, nostrum nam excepturi quisquam iste vitae sit, minus nemo. Consectetur hic voluptas alias qui error sunt laborum quam molestiae. Doloremque, corrupti enim explicabo omnis repudiandae tempore, eveniet earum voluptatem, deserunt sed quod ea quas numquam consequuntur. Vero nemo distinctio numquam aliquid. Ipsa exercitationem explicabo praesentium adipisci iure. Pariatur ut eius repellat perspiciatis reprehenderit. Repudiandae vero natus rerum facere. Officiis, quibusdam unde?</p>
     </div>
 </body>
 </html>
